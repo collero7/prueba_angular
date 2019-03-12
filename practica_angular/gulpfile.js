@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 /*
 * Dependencias
 */
@@ -8,6 +8,9 @@ const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
 const sass = require('gulp-sass');
 const pug = require('gulp-pug');
+/*
+*
+*/
 
 
 
