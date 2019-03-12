@@ -1,0 +1,28 @@
+	<div class="container">
+		<form name="formu" ng-submit="buscarPelicula(datos)">
+			<div>
+	  			<input type="text" name="usuario" class="ocultos" id="usuario"/>
+	  		</div>
+			<div id="divBuscar">
+	   		 	<input type="text" name="buscar" ng-model="datos" id="buscar" placeholder="Buscar pelicula..." required="required" />
+	   		 	<input type="submit" value="Buscar" id="botonBuscar"/>
+	  		</div>
+		</form>
+		<table>
+			<tr>
+				<td ng-repeat="contenido in contenidoPeliculas.slice(0, 4)">
+					<img ng-src="{{contenido.Poster}}">
+					<hr>
+					<button class="btnDescripcion" ng-click="navegarDetalle(contenido.Title)">Ver descripción</button>
+				</td>
+			</tr>
+			<tr>
+				<td ng-repeat="contenido in contenidoPeliculas.slice(4, 9)">
+					<img ng-src="{{contenido.Poster}}">
+					<hr>
+					<button class="btnDescripcion" ng-click="navegarDetalle(contenido.Title)">Ver descripción</button>
+				</td>
+			</tr>
+		</table>
+		
+	</div>

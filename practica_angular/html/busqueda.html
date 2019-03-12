@@ -1,0 +1,64 @@
+<div class="containerBusq">
+
+	<p class="numeroResultados" id="numeroResultados">{{resultadoBusqueda.totalRegistros}}</p>
+	<p class="numeroResultados">Resultados sobre {{ resultado }}</p>
+	
+	<table ng-repeat="resultado in resultadoBusqueda.contenido | limitTo: 5 | limitTo: -5">
+		<tr>
+			<td colspan="2">
+				<img ng-src="{{ resultado.Poster }}">
+				<hr>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><b>Titulo: </b></p>
+			</td>
+			<td>
+				<p class="containerBusq">{{ resultado.Title }}</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><b>Año: </b></p>
+			</td>
+			<td>
+				<p class="containerBusq">{{ resultado.Year }}</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><b>Categoria: </b></p>
+			</td>
+			<td>
+				<p class="containerBusq">{{ resultado.Type }}</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button class=fav ng-click="gestionFavorito(resultado.Title)">Añadir a favoritos</button>
+			</td>
+			<td>
+				<button class=fav ng-click="navegarDetalle(resultado.Title)">Ver descripción</button>
+			</td>
+		</tr>
+		<br>
+		<hr>
+		<br>
+	</table>
+
+	<table id="navegacion">
+		<tr>
+			<td>
+				<button class="fav" ng-click="anterior()">Anterior</button>
+			</td>
+			<td>
+				<p>Página {{ inicio }}</p>
+			</td>
+			<td>
+				<button class="fav" ng-click="siguiente()">Siguiente</button>
+			</td>
+		</tr>
+	</table>
+
+</div>

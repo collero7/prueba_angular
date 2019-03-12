@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="PruebaApp" ng-controller="mainCtrl">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Prueba GFI</title>
+
+        <!-- Incluir Bootstrap -->
+        <link rel="stylesheet" href="/practica_angular/css/bootstrap.min.css">
+
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="/practica_angular/css/animate.css">
+
+        <!-- Estilo personalizado -->
+        <link rel="stylesheet" href="/practica_angular/css/estilos.css">
+
+        <!-- Incluir AngularJS -->
+        <script src="/practica_angular/js/lib/angular.min.js"></script>
+        <script src="/practica_angular/js/lib/angular-route.min.js"></script>
+
+
+        <script src="/practica_angular/js/app.js"></script>
+        <script src="/practica_angular/js/config.js"></script>
+
+        <!-- Controladores de páginas -->
+        <script src="/practica_angular/js/loginCtrl.js"></script>
+        <script src="/practica_angular/js/registroCtrl.js"></script>
+        <script src="/practica_angular/js/homeCtrl.js"></script>
+        <script src="/practica_angular/js/detalleCtrl.js"></script>
+        <script src="/practica_angular/js/favoritosCtrl.js"></script>
+        <script src="/practica_angular/js/busquedaCtrl.js"></script>
+        <script src="/practica_angular/js/servicios.js"></script>
+
+
+
+    </head>    
+    <body>
+        
+        <div ng-include="menuSuperior"></div>
+
+            <div class="container">
+
+        <!-- La pagina principal ira aquí -->
+            
+            <div ng-view></div>
+
+        </div>
+
+
+    </body>
+</html>

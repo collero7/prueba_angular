@@ -1,0 +1,52 @@
+<div class="container">
+	<table id="desc">
+		<tr>
+			<td><img ng-src="{{contenidoPelicula.Poster}}"></td>
+		</tr>			
+		<tr>
+			<td><p><b>Titulo: <b></p></td>
+			<td><p id="titulo">{{contenidoPelicula.Title}}</td>
+		</tr>
+		<tr>
+			<td><p><b>Año: <b></p></td>
+			<td><p id="anio">{{contenidoPelicula.Year}}</td>
+		</tr>
+		<tr>
+			<td><p><b>Categoria: <b></p></td>
+			<td><p id="clasi">{{contenidoPelicula.Type}}</td>
+		</tr>
+		<tr>
+			<td><p><b>Genero: <b></p></td>
+			<td><p id="gene">{{contenidoPelicula.Genre}}</td>
+		</tr>
+		<tr>
+			<td><p><b>Emisión: <b></p></td>
+			<td><p id="emi">{{contenidoPelicula.Released}}</td>
+		</tr>
+		<tr>
+			<td><p><b>Duración: <b></p></td>
+			<td><p id="dura">{{contenidoPelicula.Runtime}}</td>
+		</tr>
+		<tr>
+			<td><p><b>Director: <b></p></td>
+			<td><p id="direc">{{contenidoPelicula.Director}}</td>
+		</tr>
+		<tr>
+			<td><p><b>Autor: <b></p></td>
+			<td><p id="aut">{{contenidoPelicula.Writer}}</td>
+		</tr>
+		<tr>
+			<td><p><b>Idioma: <b></p></td>
+			<td><p id="idi">{{contenidoPelicula.Language}}</td>
+		</tr>
+		<tr>
+			<td><p><b>Sipnosis: <b></p></td>
+			<td><p id="sipn">{{contenidoPelicula.Plot}}</td>
+		</tr>
+		<tr>
+			<td>
+				<button id="fav" class="fav" ng-click="gestionFavorito()">Añadir a favoritos</button>
+			</td>
+		</tr>
+	</table>
+</div>

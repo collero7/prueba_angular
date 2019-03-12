@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="PruebaApp" ng-controller="loginCtrl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    
+    <!-- Estilo del tema -->
+    <link rel="stylesheet" href="/practica_angular/css/AdminLTE.min.css">
+    
+	  <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-route.min.js"></script>
+    
+	  <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+
+      <!-- Controladores de páginas -->
+    <script src="js/loginCtrl.js"></script>
+    <script src="js/registroCtrl.js"></script>
+    <script src="js/homeCtrl.js"></script>
+    <script src="js/detalleCtrl.js"></script>
+    <script src="js/favoritosCtrl.js"></script>
+    <script src="js/busquedaCtrl.js"></script>
+    <script src="js/servicios.js"></script>
+
+
+  </head>
+
+  <body class="hold-transition login-page">
+
+    <div class="login-box">
+      <div class="login-logo">
+        
+      </div>
+
+
+      <div class="login-box-body">
+      <center>
+        <img src="img/logo.png">
+      </center>
+        <p class="login-box-msg"><b>Ingrese Su Usuario y Contraseña</b></p>
+
+        <form name="formL" ng-submit="redireccionar(datos)">
+
+          <div class="form-group has-feedback">
+            
+            <input type="text" 
+            	   class="form-control" 
+            	   placeholder="Nombre"
+            	   name="nombre"
+            	   required="required"
+            	   ng-model="datos.nombre">
+
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+          </div>
+
+          <div class="form-group has-feedback">
+            <input type="password" 
+                   class="form-control" 
+                   placeholder="Contraseña"
+                   name="contrasena"
+                   required="required"
+            	   ng-model="datos.contrasena">
+
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <button type="submit" 
+              		  class="btn btn-success btn-block btn-flat">Ingresar</button>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-12">
+              <button class="btn btn-info btn-block btn-flat"
+                      ng-click="registrar()">Registrarse</button>
+            </div>
+          </div>
+
+		      <div class="row" ng-show="invalido">
+		      	<div class="col-md-12">
+		      		<br>
+		      		<div class="alert alert-danger">
+		      			<strong>{{ mensaje }}</strong>
+		      		</div>
+		      	</div>
+		      </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </body>
+</html>

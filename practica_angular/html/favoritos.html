@@ -1,0 +1,44 @@
+<div class="containerFav">
+	<table ng-repeat="pelicula in contenidoPeliculas">
+		<tr>
+			<td colspan="2">
+				<img ng-src="{{pelicula.Poster}}">
+				<hr>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><b>Título: </b></p>
+			</td>
+			<td>
+				<p class="resultadoFav">{{pelicula.Title}}</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><b>Año: </b></p>
+			</td>
+			<td>
+				<p class="resultadoFav">{{pelicula.Year}}</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><b>Categoría: </b></p>
+			</td>
+			<td>
+				<p class="resultadoFav">{{pelicula.Type}}</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<button class=fav ng-click="eliminarFavorito(usuarioPadre, pelicula.Title)">Eliminar favorito</button>
+			</td>
+		</tr>
+		<br>
+		<hr>
+		<br>
+	</table>
+
+
+</div>
